@@ -48,5 +48,4 @@ $mobileprovision_output = $output_decoded['file'];
 curl_close($curl);
 
 // Sign
-$output = json_decode(file_get_contents('https://sign.starfiles.co?ipa=' . $ipa_output . '&p12=' . $p12_output . '&mobileprovision=' . $mobileprovision_output . '&password=' . $password), true)['file'];
-file_put_contents('file_signed.ipa', file_get_contents('https://api.starfiles.co/direct/' . $output));
+file_put_contents('file_signed.ipa', file_get_contents('https://sign.starfiles.co?ipa=' . $ipa_output . '&p12=' . $p12_output . '&mobileprovision=' . $mobileprovision_output . '&password=' . $password));
