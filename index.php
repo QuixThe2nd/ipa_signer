@@ -18,7 +18,7 @@ $output = curl_exec($curl);
 $output_decoded = json_decode($output, true);
 if(!isset($output_decoded['file']))
     die('Failed ' . __LINE__ . ': ' . $output);
-$ipa_output = json_decode($output_decoded['file'], true);
+$ipa_output = $output_decoded['file'];
 curl_close($curl);
 
 // Upload P12
@@ -31,8 +31,7 @@ $output = curl_exec($curl);
 $output_decoded = json_decode($output, true);
 if(!isset($output_decoded['file']))
     die('Failed ' . __LINE__ . ': ' . $output);
-$p12_output = json_decode($output_decoded['file'], true);
-$p12_output = $output['file'];
+$p12_output = $output_decoded['file'];
 curl_close($curl);
 
 // Upload Mobileprovision
@@ -45,7 +44,7 @@ $output = curl_exec($curl);
 $output_decoded = json_decode($output, true);
 if(!isset($output_decoded['file']))
     die('Failed ' . __LINE__ . ': ' . $output);
-$mobileprovision_output = json_decode($output_decoded['file'], true);
+$mobileprovision_output = $output_decoded['file'];
 curl_close($curl);
 
 // Sign
