@@ -48,4 +48,4 @@ $mobileprovision_output = $output_decoded['file'];
 curl_close($curl);
 
 // Sign
-echo 'https://sign.starfiles.co?ipa=' . $ipa_output . '&p12=' . $p12_output . '&mobileprovision=' . $mobileprovision_output . '&password=' . $password;
+header('Location: https://sign.starfiles.co?ipa=' . $ipa_output . '&p12=' . $p12_output . '&mobileprovision=' . $mobileprovision_output . '&password=' . $password);
