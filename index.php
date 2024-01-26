@@ -3,9 +3,9 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-$ipa = new CURLFile(realpath('file.ipa'));
-$p12 = new CURLFile(realpath('file.p12'));
-$mobileprovision = new CURLFile(realpath('file.mobileprovision'));
+$ipa = new CURLFile(realpath('esign_4.8.2_unsigned.ipa'));
+$p12 = new CURLFile(realpath('Migu Digital Media Co. Ltd.p12'));
+$mobileprovision = new CURLFile(realpath('Migu Digital Media Co. Ltd.mobileprovision'));
 $password = file_get_contents('password.txt');
 
 // Upload IPA
